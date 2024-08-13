@@ -37,6 +37,7 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok"
     implementation "org.mapdb:mapdb:3.0.8"
     //编译和运行都需要处理
+    implementation "org.redisson:redisson:3.15.1"
     implementation "org.projectlombok:lombok"
     implementation "cn.hutool:hutool-all:5.7.16"
     implementation 'org.openjdk.nashorn:nashorn-core:15.4'
