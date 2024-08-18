@@ -19,7 +19,6 @@ public class TestController {
 
     @GetMapping("test")
     public String Test(){
-//        demoES.test("");
         RAtomicLong test = redissonClient.getAtomicLong("test");
         long andIncrement = test.getAndIncrement();
         System.out.println(andIncrement);
