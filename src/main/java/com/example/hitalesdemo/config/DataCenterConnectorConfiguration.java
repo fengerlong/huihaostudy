@@ -24,7 +24,7 @@ public class DataCenterConnectorConfiguration {
     @Bean
     public RedissonClient redissonClient() {
         Config config = new Config();
-        config.useSingleServer().setAddress("redis://192.168.56.99:6379");
+        config.useSingleServer().setAddress("redis://192.168.26.31:6379").setPassword("hitales202422").setDatabase(8);
         return Redisson.create(config);
     }
 }
