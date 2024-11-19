@@ -1,6 +1,9 @@
 package com.example.hitalesdemo.config;
 
 import org.apache.catalina.connector.Connector;
+import org.redisson.Redisson;
+import org.redisson.api.RedissonClient;
+import org.redisson.config.Config;
 import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,5 +19,12 @@ public class DataCenterConnectorConfiguration {
         connector.setMaxPostSize(500 * 1024 * 1024);
         tomcat.addAdditionalTomcatConnectors(connector);
         return tomcat;
+    }
+
+    @Bean
+    public RedissonClient redissonClient() {
+        Config config = new Config();
+        config.useSingleServer().setAddress("redis://192.168.26.31:6379").setPassword("hitales202422").setDatabase(8);
+        return Redisson.create(config);
     }
 }
