@@ -33,16 +33,17 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-actuator'
-    implementation 'com.google.code.gson:gson:2.10.1' // 添加 Gson 依赖
 
     //编译时需要的注解处理器
     annotationProcessor "org.projectlombok:lombok"
-    implementation "org.mapdb:mapdb:3.0.8"
     //编译和运行都需要处理
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'com.google.code.gson:gson:2.10.1' // 添加 Gson 依赖
+    implementation 'org.mapdb:mapdb:3.0.8'
+    implementation 'org.redisson:redisson:3.15.1'
     implementation "com.alibaba:fastjson:1.2.83"
     implementation "org.projectlombok:lombok"
-    implementation "cn.hutool:hutool-all:5.7.16"
+    implementation 'cn.hutool:hutool-all:5.7.16'
     implementation 'org.openjdk.nashorn:nashorn-core:15.4'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.data:spring-data-commons:2.5.1'

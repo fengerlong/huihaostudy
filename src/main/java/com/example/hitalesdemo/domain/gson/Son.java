@@ -1,7 +1,9 @@
 package com.example.hitalesdemo.domain.gson;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class Son extends Parent{
 
