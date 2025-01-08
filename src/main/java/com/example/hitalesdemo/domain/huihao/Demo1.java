@@ -1,12 +1,16 @@
 package com.example.hitalesdemo.domain.huihao;
 
-import cn.hutool.core.date.DateUtil;
-import cn.hutool.core.date.TimeInterval;
-
 public class Demo1 {
 
     public static void main(String[] args) {
-        TimeInterval timer = DateUtil.timer();
-        System.out.println(timer.intervalMs());
+        int a = 0;
+        a = test(a);
+        System.out.println(a);
+        System.out.println(++a);
+
+    }
+
+    public static int test(int sort) {
+        return ++sort;
     }
 }

@@ -5,3 +5,9 @@ spring:
   redis:
     host: 192.168.56.99
     port: 6379
+
+# 华西CDSS接口配置
+hx:
+  scheduled:
+    task-cron: "0 0/2 * * * ?" #每天拉取数据的定时任务的表达式
+    end-time: 6   #默认为每天的6点钟
